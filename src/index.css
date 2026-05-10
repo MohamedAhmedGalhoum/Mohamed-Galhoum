@@ -36,3 +36,39 @@
     font-family: "Playfair Display", serif;
   }
 }
+
+@layer components {
+  .glass{
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+}
+
+@layer utilities {
+  @keyframes role-cycle {
+    0%, 20% {
+      transform: translateY(0%);
+    }
+
+    25%, 45% {
+      transform: translateY(-25%);
+    }
+
+    50%, 70% {
+      transform: translateY(-50%);
+    }
+
+    75%, 95% {
+      transform: translateY(-75%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .animate-role-cycle {
+    animation: role-cycle 10s ease-in-out infinite;
+  }
+}
