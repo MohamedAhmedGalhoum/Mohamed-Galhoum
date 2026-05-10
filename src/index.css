@@ -47,28 +47,31 @@
 
 @layer utilities {
   @keyframes role-cycle {
-    0%, 20% {
-      transform: translateY(0%);
-    }
-
-    25%, 45% {
-      transform: translateY(-25%);
-    }
-
-    50%, 70% {
-      transform: translateY(-50%);
-    }
-
-    75%, 95% {
-      transform: translateY(-75%);
-    }
-
-    100% {
-      transform: translateY(0%);
-    }
+    0%, 20% { transform: translateY(0%); }
+    25%, 45% { transform: translateY(-25%); }
+    50%, 70% { transform: translateY(-50%); }
+    75%, 95% { transform: translateY(-75%); }
+    100% { transform: translateY(0%); }
   }
 
   .animate-role-cycle {
     animation: role-cycle 10s ease-in-out infinite;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+      filter: blur(0px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
   }
 }

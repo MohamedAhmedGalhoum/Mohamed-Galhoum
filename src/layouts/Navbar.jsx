@@ -216,11 +216,12 @@ export const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="
                   rounded-xl px-4 py-3
-                  text-sm font-medium
+                  text-md font-medium
                   text-muted-foreground
                   transition-all duration-300
                   hover:bg-primary/10
                   hover:text-foreground
+                  animate-fade-in
                 "
               >
                 {link.label}
