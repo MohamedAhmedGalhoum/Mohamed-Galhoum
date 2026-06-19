@@ -16,7 +16,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-4 sm:pt-5">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-4 pt-4 sm:pt-5 z-50">
       <nav
         className="
           glass mx-auto flex max-w-7xl items-center justify-between

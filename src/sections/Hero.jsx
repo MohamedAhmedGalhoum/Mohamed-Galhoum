@@ -1,3 +1,6 @@
+import {motion} from 'framer-motion';
+import AnimatedHeading from '../components/AnimatedHeading';
+import AnimatedHeadingforMOName from '../components/AnimatedMohamedGalhoumBrand';
 export const Hero = () => {
     return (
       <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -11,10 +14,9 @@ export const Hero = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background to-background"></div>
         </div>
         {/* Green Dots */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className = "absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(40)].map((_, i) => (
             <div
-              key={i}
               className="absolute w-1.5 h-1.5 rounded-full opacity-60"
               style={{
                 backgroundColor: "#20a663",
@@ -24,19 +26,41 @@ export const Hero = () => {
                 animationDelay: `${Math.random() * 5}s`,
               }}
             />
-          ))}
+          ))} 
         </div>
         {/* Content */}
-        <div>
-            <div>
+        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+            <div className = "grid lg:grid-cols-2 gap-12 items-center">
                 {/* left Column - text Content */}
-                <div>
+                <div className = "space-y-8">
+                    <AnimatedHeadingforMOName />
+                    <div className = "animate-fade-in">
+                        <span className = "inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                            <span className = "w-2 h-2 bg-primary rounded-full animate-pulse"/>
+                                Software Engineer - Full Stack Engineer - Competitive Programmer
+                        </span>
+                    </div>  
+                    {/* Headline */}
                     <div>
-                        
+                        <AnimatedHeading />
+                            <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
+                                Crafting fast, scalable, and intuitive web experiences with a strong focus on{" "}
+                                <span className="text-primary glow-text font-medium">
+                                    Frontend Engineering
+                                </span>.
+                            </p>
+                            <p className="mt-3 text-lg md:text-xl text-muted-foreground leading-relaxed">
+                                <span className="text-primary glow-text font-medium">
+                                    Competitive Programmer
+                                </span>{" "}
+                                passionate about algorithms, problem-solving, and{" "}
+                                <span className="font-serif italic text-white">
+                                    building efficient solutions
+                                </span>.
+                            </p>
                     </div>
                 </div>
                 {/* right Column - Profile Image */}
-                
             </div>
         </div>
       </section>
