@@ -1,13 +1,17 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import AnimatedHeading from '../components/AnimatedHeading';
 import AnimatedHeadingforMOName from '../components/AnimatedMohamedGalhoumBrand';
+import HeroImage from '../components/AnimatedHeroImage';
+import { Button } from '../components/Button.jsx';
+import ContactButton from '../components/ContactButton.jsx';
 export const Hero = () => {
     return (
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Bg content */}
         <div className="absolute inset-0">
           <img
-            src="/hero-bg.jpg"
+            src="public/hero-bg.jpg"
             alt="Background image"
             className="w-full h-full object-cover opacity-40"
           />
@@ -59,8 +63,16 @@ export const Hero = () => {
                                 </span>.
                             </p>
                     </div>
+                    {/* Buttons */}
+                    <div className = "flex items-center gap-6">
+                        <Button size="lg">Contact Me </Button>
+                        <ContactButton />
+                    </div>
                 </div>
                 {/* right Column - Profile Image */}
+                <div className = "flex justify-center lg:justify-end">
+                    <HeroImage />
+                </div>
             </div>
         </div>
       </section>
