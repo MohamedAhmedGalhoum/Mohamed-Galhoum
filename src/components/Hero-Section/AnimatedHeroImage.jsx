@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import heroImage from "@/assets/Hero_Here.jpeg";
 
 export default function HeroImage() {
   return (
@@ -23,7 +24,7 @@ export default function HeroImage() {
         >
           {/* Image */}
           <img
-            src="src/assets/Hero_Here.jpeg"
+            src={heroImage}
             alt="Mohamed Galhoum"
             className="w-full h-full object-cover"
           />

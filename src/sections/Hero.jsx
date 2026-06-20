@@ -1,17 +1,18 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import AnimatedHeading from '../components/AnimatedHeading';
-import AnimatedHeadingforMOName from '../components/AnimatedMohamedGalhoumBrand';
-import HeroImage from '../components/AnimatedHeroImage';
-import { Button } from '../components/Button.jsx';
-import ContactButton from '../components/ContactButton.jsx';
+import AnimatedHeading from '../components/Hero-Section/AnimatedHeading.jsx';
+import AnimatedHeadingforMOName from '../components/Hero-Section/AnimatedMohamedGalhoumBrand.jsx';
+import HeroImage from '../components/Hero-Section/AnimatedHeroImage.jsx';
+import { Button } from '../components/Hero-Section/Button.jsx';
+import ContactButton from '../components/Hero-Section/ContactButton.jsx';
+import heroBg from '/hero-bg.jpg';
 export const Hero = () => {
     return (
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Bg content */}
         <div className="absolute inset-0">
           <img
-            src="public/hero-bg.jpg"
+            src={heroBg}
             alt="Background image"
             className="w-full h-full object-cover opacity-40"
           />

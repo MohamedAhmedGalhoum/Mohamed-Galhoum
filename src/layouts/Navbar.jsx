@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 import profileImg from "@/assets/Mohamed_Galhoum_Image.jpg";
-import { Button } from "@/components/Button";
+import { Button } from "../components/Hero-Section/Button";
 
 const navLinks = [
   { href: "#about", label: "About" },
